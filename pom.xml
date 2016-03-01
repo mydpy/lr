@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mydpy.sparkml</groupId>
+	<artifactId>logistic-regression</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>SparkML Logistic Regression</name>
+
+	<properties>
+		<spark.version>1.6.0</spark.version>
+		<scala.version>2.10</scala.version>
+		<scala.version.full>2.10.5</scala.version.full>
+                <git.url>git@github.com:mydpy/lr.git</git.url>
+	</properties>
+
+	<scm>
+		<url>scm:git:${git.url}</url>
+		<connection>scm:git:${git.url}</connection>
+		<developerConnection>scm:git:${git.url}</developerConnection>
+	</scm>
+
+	<dependencies>
+
+		
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>${scala.version.full}</version>
+		</dependency>	
+
+		<!-- spark -->
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_${scala.version}</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		
+	</dependencies>
+
+	<build>
+		
+		<plugins>
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <version>3.1</version>
+		        <configuration>
+		          <source>1.7</source>
+		          <target>1.7</target>
+		        </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
